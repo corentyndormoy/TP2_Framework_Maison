@@ -34,7 +34,7 @@
             <li class="my-2">
                 <a class="text-gray-400 hover:text-gray-100 dark:text-gray-300 dark:hover:text-white transition-colors duration-200"
                    href="#">
-                    &copy prénom NOM - 2021
+                    &copy Corentyn DORMOY - 2021
                 </a>
             </li>
         </ul>
