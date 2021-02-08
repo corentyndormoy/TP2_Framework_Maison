@@ -36,13 +36,13 @@ class Kernel
             list($controller, $method) = [...explode("/", $path), "index"];
             $className = "App\\Controller\\" . ucfirst($controller) . "Controller";
             if ($className === $defaultController && $method === "index") {
-               /** @todo we called index of $defaultController, make a redirection to / here WITHOUT using the header function. */ 
+               return new RedirectResponse("/");
             }
         }
     
         if (!class_exists($className)
             || !method_exists($className, $method)) {
-            /** @todo return a not found response here (status code 404) */
+            return new Response("Page not found", 404);
         }
     
         $resolvedArguments = $this->parametersResolver($className, $method);
